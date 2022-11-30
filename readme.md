@@ -10,11 +10,11 @@ When finished, run `npm run build` to build the plugin for production usage.
 
 ## Usage
 
-- Install the plugin and enable in the plugins directory.
-- You should now have a "Rooms" link in the left hand menu bar which will allow you to create Room posts.
-- Create a Room post and then add the `Room Post Type` block to the post
-- A new "Room Meta" section should now be visible in the sidebar
-- Enter the required meta data about the room and then press "Save" or "Update" to save the changes
+-   Install the plugin and enable in the plugins directory.
+-   You should now have a "Rooms" link in the left hand menu bar which will allow you to create Room posts.
+-   Create a Room post and then add the `Room Post Type` block to the post
+-   A new "Room Meta" section should now be visible in the sidebar
+-   Enter the required meta data about the room and then press "Save" or "Update" to save the changes
 
 ### Theme
 

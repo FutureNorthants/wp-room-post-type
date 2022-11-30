@@ -15,7 +15,10 @@ import "./editor.scss";
  * @return {WPElement} Element to render.
  */
 export default function Edit() {
-	const postType = useSelect((select) => select("core/editor").getCurrentPostType(), []);
+	const postType = useSelect(
+		(select) => select("core/editor").getCurrentPostType(),
+		[]
+	);
 	const [meta, setMeta] = useEntityProp("postType", postType, "meta");
 
 	const metaTheatre = meta["theatre_occupancy"] ?? "";
@@ -108,27 +111,58 @@ export default function Edit() {
 	};
 
 	return (
-		<PluginDocumentSettingPanel title={__("Room Meta", "room-post-type")} initialOpen={true}>
+		<PluginDocumentSettingPanel
+			title={__("Room Meta", "room-post-type")}
+			initialOpen={true}
+		>
 			<PanelRow>
-				<TextControl label="Theatre Occupancy" value={metaTheatre} onChange={updateTheatre} />
+				<TextControl
+					label="Theatre Occupancy"
+					value={metaTheatre}
+					onChange={updateTheatre}
+				/>
 			</PanelRow>
 			<PanelRow>
-				<TextControl label="Boardroom Occupancy" value={metaBoardroom} onChange={updateBoardroom} />
+				<TextControl
+					label="Boardroom Occupancy"
+					value={metaBoardroom}
+					onChange={updateBoardroom}
+				/>
 			</PanelRow>
 			<PanelRow>
-				<TextControl label="Induction Occupancy" value={metaInduction} onChange={updateInduction} />
+				<TextControl
+					label="Induction Occupancy"
+					value={metaInduction}
+					onChange={updateInduction}
+				/>
 			</PanelRow>
 			<PanelRow>
-				<TextControl label="Classroom Occupancy" value={metaClassroom} onChange={updateClassroom} />
+				<TextControl
+					label="Classroom Occupancy"
+					value={metaClassroom}
+					onChange={updateClassroom}
+				/>
 			</PanelRow>
 			<PanelRow>
-				<TextControl label="Banquet Occupancy" value={metaBanquet} onChange={updateBanquet} />
+				<TextControl
+					label="Banquet Occupancy"
+					value={metaBanquet}
+					onChange={updateBanquet}
+				/>
 			</PanelRow>
 			<PanelRow>
-				<TextControl label="Cabaret 6ft Occupancy" value={metaCabaret6ft} onChange={updateCabaret6ft} />
+				<TextControl
+					label="Cabaret 6ft Occupancy"
+					value={metaCabaret6ft}
+					onChange={updateCabaret6ft}
+				/>
 			</PanelRow>
 			<PanelRow>
-				<TextControl label="Cabaret 4ft Occupancy" value={metaCabaret4ft} onChange={updateCabaret4ft} />
+				<TextControl
+					label="Cabaret 4ft Occupancy"
+					value={metaCabaret4ft}
+					onChange={updateCabaret4ft}
+				/>
 			</PanelRow>
 			<PanelRow>
 				<label>AUDIO EQUIPMENT</label>
@@ -140,7 +174,10 @@ export default function Edit() {
 			</PanelRow>
 			{metaAudio.map((audio, index) => (
 				<PanelRow key={index}>
-					<TextControl value={audio} onChange={(e) => updateAudio(e, index)} />
+					<TextControl
+						value={audio}
+						onChange={(e) => updateAudio(e, index)}
+					/>
 					<Button onClick={(e) => removeAudio(index)} isDestructive>
 						<Icon icon="no" />
 					</Button>
@@ -156,8 +193,14 @@ export default function Edit() {
 			</PanelRow>
 			{metaPresentation.map((presentation, index) => (
 				<PanelRow key={index}>
-					<TextControl value={presentation} onChange={(e) => updatePresentation(e, index)} />
-					<Button onClick={(e) => removePresentation(index)} isDestructive>
+					<TextControl
+						value={presentation}
+						onChange={(e) => updatePresentation(e, index)}
+					/>
+					<Button
+						onClick={(e) => removePresentation(index)}
+						isDestructive
+					>
 						<Icon icon="no" />
 					</Button>
 				</PanelRow>
