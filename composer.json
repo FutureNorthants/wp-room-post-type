@@ -1,0 +1,7 @@
+{
+	"name": "future-northants/room-post-type",
+	"description": "Room custom post type with meta fields",
+	"type": "wordpress-plugin",
+	"license": "GPL-3.0-or-later",
+	"require": {}
+}
